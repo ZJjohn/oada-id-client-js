@@ -251,7 +251,8 @@ function exchangeCode(state, parameters, callback) {
 // TODO: Should I be able to register callbacks in two places?
 core.handleRedirect = function handleRedirect(parameters, callback) {
     var stateTok = parameters.state;
-
+    console.log("the pare is :  ");
+    console.log(parameters);
     core.retrieveState(stateTok, function(err, stateObj) {
         var cb = combineCallbacks(stateObj && stateObj.callback, callback);
 

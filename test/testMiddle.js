@@ -20,10 +20,10 @@ app.use('/who',
    login.getIDToken('identity.oada-dev.com', options));
 app.use('/get',
     login.getAccessToken('identity.oada-dev.com', options));
-app.use('/redirect', login.handleRedirect());
+/*app.use('/redirect', login.handleRedirect());
 app.use('/redirect', function(req, res) {
     res.json(req.token);
-});
+});*/
 
 
 describe("middleWare", function(){
@@ -45,13 +45,13 @@ describe("middleWare", function(){
     });
 
 
-    describe("GET /redirect", function(){
+   /* describe("GET /redirect", function(){
         it('should handleRedirect', function(done){
             request(app)
                 .get('/redirect')
                 .expect(302, done);
         });
-    });
+    });*/
     //})
 
 });
